@@ -25,7 +25,8 @@ from typing import Iterator, Tuple
 
 import torch
 from torch.utils.data import Dataset
-from torch.utils.data.distributed import DistributedSampler, T_co
+from torch.utils.data.distributed import DistributedSampler
+from torch.utils.data.distributed import _T_co as T_co
 
 from lighteval.logging.hierarchical_logger import hlog_warn
 from lighteval.tasks.requests import (
