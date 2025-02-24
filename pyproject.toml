@@ -88,7 +88,7 @@ nanotron = [
   "tensorboardX"
 ]
 tensorboardX = ["tensorboardX"]
-vllm = ["https://github.com/Iacob-Alexandru-Andrei/vllm/tree/fl", "ray", "more_itertools"]
+vllm = ["vllm==https://github.com/Iacob-Alexandru-Andrei/vllm/tree/fl", "ray", "more_itertools"]
 quality = ["ruff==v0.2.2","pre-commit"]
 tests = ["pytest==7.4.0"]
 dev = ["lighteval[accelerate,quality,tests,multilingual]"]
