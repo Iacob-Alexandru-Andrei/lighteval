@@ -33,8 +33,9 @@ from lighteval.utils.imports import is_peft_available
 from lighteval.utils.utils import EnvConfig
 
 
-if is_peft_available():
-    from peft import PeftModel
+# NOTE: We have removed peft since it can cause issues
+# if is_peft_available():
+#     from peft import PeftModel
 
 
 class AdapterModel(BaseModel):
