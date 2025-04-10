@@ -98,8 +98,9 @@ class VLLMModel(LightevalModel):
 
     def cleanup(self):
         destroy_model_parallel()
-        if self.model is not None:
-            del self.model.llm_engine.model_executor.driver_worker
+        # NOTE: This breaks newer VLLM versions.
+        # if self.model is not None:
+        #     del self.model.llm_engine.model_executor.driver_worker
         self.model = None
         gc.collect()
         ray.shutdown()
